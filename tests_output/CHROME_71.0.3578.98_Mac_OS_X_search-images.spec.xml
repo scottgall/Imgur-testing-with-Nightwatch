@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="search-images.spec"
+    errors="0" failures="0" hostname="" id="" package="search-images.spec" skipped="0"
+    tests="1" time="10.60" timestamp="">
+  
+    <testcase name="SEARCH IMAGES TEST" classname="search-images.spec" time="10.60" assertions="7">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
