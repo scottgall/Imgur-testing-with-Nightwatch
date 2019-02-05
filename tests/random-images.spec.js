@@ -1,31 +1,30 @@
 module.exports = {
-  'Demo test Google' : function (browser) {
+  'RANDOM IMAGES TEST' : function (browser) {
+    let firstImage;
     browser
       .url('http://www.imgur.com')
-      .waitForElementVisible('body')
-      // .setValue('input[type=text]', 'waffles')
-      // .useXpath() // every selector now must be xpath
+      .waitForElementVisible('body', 5000)
+      .getAttribute('.Post-item-media>img', 'src', function(src) {
+        console.log(src.value);
+        firstImage = src.value;
+      })
       .click('.sort')
       .pause(1000)
       .useXpath()
       .moveToElement('//div[text() = "Random"]', 0, 0)
-      .pause(2000)
+      .pause(1000)
       .click('//div[text() = "Random"]')
-      // .click('//*[@id="root"]/div/div[1]/div/div[1]/div[6]/div[1]/span[2]/div/div[2]/div[2]/div[3]')
-      // .click("//div[contains(@class, 'Dropdown-option') and text()='Random']")
-      // .click('span[class="Button-label"]')
-
-      // .waitForElementVisible('body')
-      // .setValue('#paste-url-input', 'https://images.pexels.com/photos/259803/pexels-photo-259803.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
-      .pause(20000)
-
-      // .setValue('input[type=text]', 'nightwatch')
-      // .waitForElementVisible('input[name=btnK]')
-      // .click('input[name=btnK]')
-      // .pause(1000)
-      // .assert.containsText('#main', 'Night Watch')
-      .end();
+      .pause(2000)
+      .useCss()
+      .getAttribute('.Post-item-media>img', 'src', function(src) {
+        browser.assert.notEqual(src.value, firstImage);
+      })
+      .click('.sort')
+      .useXpath()
+      .expect.element('//*[@id="root"]/div/div[1]/div/div[1]/div[6]/div[1]/span[2]/div/div[1]/span[1]').text.to.equal('RANDOM');
+      browser.assert.attributeContains('//*[@id="root"]/div/div[1]/div/div[1]/div[6]/div[1]/span[2]/div/div[2]/div[2]/div[3]', 'class', 'isActive');
+      browser
+        .pause(2000)
+        .end();
   }
 };
-
-//*[@id="root"]/div/div[1]/div/div[1]/div[6]/div[1]/span[2]/div/div[2]/div[2]/div[3]

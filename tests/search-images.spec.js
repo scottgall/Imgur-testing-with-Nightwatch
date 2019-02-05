@@ -1,6 +1,5 @@
 module.exports = {
-  'SEARCH IMAGES TEST' : function (browser)
-  {
+  'SEARCH IMAGES TEST' : function (browser) {
     const searchTerm = 'waffles';
     const regexSearchTerm = new RegExp(searchTerm, 'i');
     browser
@@ -11,7 +10,7 @@ module.exports = {
       .waitForElementVisible('.search-sentence', 5000)
       .url((url) => {
         browser
-          .assert.notEqual(url.value, 'https://imgur.com/')
+          .assert.notEqual(url.value, 'https://imgur.com/');
       })
       .assert.urlEquals(`https://imgur.com/search?q=${searchTerm}`);
     browser.expect.element('.search').value.to.be.equal(searchTerm);
@@ -21,7 +20,7 @@ module.exports = {
     browser.moveToElement('img:nth-of-type(1)', 0, 0);
     browser.expect.element('.matched-search-term').text.to.match(regexSearchTerm);
     browser
-        .pause(3000)  
+        .pause(2000)  
         .end();
   }
 };

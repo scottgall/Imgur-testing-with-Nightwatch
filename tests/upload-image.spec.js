@@ -14,7 +14,7 @@ module.exports = {
       })
       .expect.element('.post-image').to.be.present;
     browser
-      .pause(3000)
+      .pause(2000)
       .end();
   }
 
