@@ -5,9 +5,9 @@
 
   <testsuite name="random-images.spec"
     errors="0" failures="0" hostname="" id="" package="random-images.spec" skipped="0"
-    tests="1" time="8.013" timestamp="">
+    tests="1" time="12.11" timestamp="">
   
-    <testcase name="RANDOM IMAGES TEST" classname="random-images.spec" time="8.013" assertions="2">
+    <testcase name="RANDOM IMAGES TEST" classname="random-images.spec" time="12.11" assertions="2">
 
     
 

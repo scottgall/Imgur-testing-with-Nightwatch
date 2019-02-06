@@ -11,7 +11,7 @@ module.exports = {
       .click('.sort')
       .pause(1000)
       .useXpath()
-      .moveToElement('//div[text() = "Random"]', 0, 0)
+      // .moveToElement('//div[text() = "Random"]', 0, 0)
       .pause(1000)
       .click('//div[text() = "Random"]')
       .pause(2000)
@@ -19,12 +19,7 @@ module.exports = {
       .getAttribute('.Post-item-media>img', 'src', function(src) {
         browser.assert.notEqual(src.value, firstImage);
       })
-      .click('.sort')
-      .useXpath()
-      .expect.element('//*[@id="root"]/div/div[1]/div/div[1]/div[6]/div[1]/span[2]/div/div[1]/span[1]').text.to.equal('RANDOM');
-      browser.assert.attributeContains('//*[@id="root"]/div/div[1]/div/div[1]/div[6]/div[1]/span[2]/div/div[2]/div[2]/div[3]', 'class', 'isActive');
-      browser
-        .pause(2000)
-        .end();
+      .pause(2000)
+      .end();
   }
 };
