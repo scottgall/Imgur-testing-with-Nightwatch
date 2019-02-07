@@ -5,9 +5,9 @@
 
   <testsuite name="search-images.spec"
     errors="0" failures="0" hostname="" id="" package="search-images.spec" skipped="0"
-    tests="1" time="7.149" timestamp="">
+    tests="1" time="9.216" timestamp="">
   
-    <testcase name="SEARCH IMAGES TEST" classname="search-images.spec" time="7.149" assertions="8">
+    <testcase name="SEARCH IMAGES TEST" classname="search-images.spec" time="9.216" assertions="8">
 
     
 

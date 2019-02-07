@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch tests/search-images.spec.js && nightwatch tests/search-images.spec.js -e firefox"
+    "test": "nightwatch tests && nightwatch tests -e firefox"
   },
   "author": "",
   "license": "ISC",
